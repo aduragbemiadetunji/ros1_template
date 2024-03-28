@@ -1,0 +1,12 @@
+<launch>
+    <node respawn="true" pkg="ros1_template" type="publisher.py" name="publisher" output="screen"></node>
+    <node respawn="true" pkg="ros1_template" type="sub_pub.py" name="sub_pub" output="screen"></node>
+    
+      <!-- Launch any node that requires parameters to run -->
+  <node  pkg="another_pkg" type="publisher.py" name="any_name" output="screen">
+    <param name="param_name1" value="param_value1" />
+    <param name="param_name2" value="param_value2" />
+    <!-- Add any other required parameters here if needed -->
+  </node>
+  
+</launch>
